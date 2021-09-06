@@ -1,0 +1,12 @@
+[
+    {
+        "text": "I like the way you explain that topic",
+        "post_id": 1,
+        "user_id": 1
+    },
+    {
+        "text": "This is a test comment for the post at position 2",
+        "post_id": 2,
+        "user_id": 2
+    }
+]
