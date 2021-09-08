@@ -1,5 +1,7 @@
-const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+//const sequelize = new Sequelize('sqlite::memory');
+const { Model, DataTypes, Sequelize } = require('sequelize');
+
 
 class Post extends Model {}
 
@@ -25,7 +27,7 @@ Post.init (
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'post',
+        modelName: 'Post'
     }
 );
 
