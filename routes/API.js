@@ -5,10 +5,14 @@ const postController = require("../controllers/postController");
 router
     .route("/")
     .get(postController.findAll);
-
+//=======================================ROUTES WORKS=========================================
 router
     .route("/:id")
     .get(postController.getPost);
+
+router
+    .route("/post")
+    .post(postController.createPost);
 
 //=======================================ROUTES WORKS=========================================    
 router
@@ -21,7 +25,7 @@ router
 
 router
     .route("/comment")
-    .post(postController.postComment)
+    .post(postController.postComment);
 
 module.exports = router;
 

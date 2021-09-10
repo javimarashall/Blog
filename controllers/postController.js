@@ -11,6 +11,8 @@ module.exports = {
     },
 
 
+
+    //=======================================ROUTES WORKS=========================================FINDS ONE POST WITH ALL ITS COMMENTS AND USERS
     getPost: async function (req, res) {
       try {
           const postData = await db.Post.findOne({ where: {id: req.params.id}});
@@ -34,6 +36,13 @@ module.exports = {
           console.log(err);
           res.status(500).json(err);
       }
+    },
+
+
+    createPost: function (req, res) {
+        db.Post.create(req.body)
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
     },
     //=======================================ROUTES WORKS=========================================FINDS ONE USER ON LOGIN====
     findOne: async function (req, res) {
