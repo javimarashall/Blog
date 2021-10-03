@@ -15,6 +15,7 @@ User.init(
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
+            onDelete: 'CASCADE'
         },
         userName: {
             type: DataTypes.STRING,
@@ -47,7 +48,7 @@ User.init(
         timestamp: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'User'
+        modelName: 'user'
     }
 );
 

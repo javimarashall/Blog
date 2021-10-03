@@ -1,6 +1,6 @@
 const sequelize = require('../config/connection');
 //const sequelize = new Sequelize('sqlite::memory');
-const { Model, DataTypes, Sequelize } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 
 
 class Post extends Model {}
@@ -9,6 +9,7 @@ Post.init (
     {
         id: {
             type: DataTypes.INTEGER,
+            onDelete: "CASCADE",
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,

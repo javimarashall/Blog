@@ -30,14 +30,15 @@ Comment.init(
                 model: 'user',
                 key: 'id'
             }
-        }
+        },
+        
     },
     {
         sequelize,
         timestamp: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'comment'
+        modelName: 'comment',
     }
 );
 
