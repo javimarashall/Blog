@@ -4,7 +4,7 @@ import Home from './pages/home';
 import Login from './pages/login';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Route exact path = "/" component = {Login} />
